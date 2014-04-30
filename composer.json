@@ -1,0 +1,19 @@
+{
+    "name": "misumirize/strip-json-comments-php",
+    "description": "Strip comments from JSON.",
+    "authors": [
+        {
+            "name": "Rize MISUMI",
+            "email": "r@ayase-e.li"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Lethe\\Json\\": "src" }
+    },
+    "require": {
+
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    }
+}
