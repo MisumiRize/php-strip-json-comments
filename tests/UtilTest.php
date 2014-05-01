@@ -17,6 +17,9 @@ class UtilTest extends PHPUnit_Framework_TestCase
     public function testNotStripCommentsInsideStrings()
     {
         $this->assertEquals(Util::stripJsonComments("{\"a\":\"b//c\"}"), "{\"a\":\"b//c\"}");
+        $this->assertEquals(Util::stripJsonComments("{\"a\":\"b/*c*/\"}"), "{\"a\":\"b/*c*/\"}");
+        $this->assertEquals(Util::stripJsonComments("{\"/*a\":\"b\"}"), "{\"/*a\":\"b\"}");
+        $this->assertEquals(Util::stripJsonComments("{\"\\\"/*a\":\"b\"}"), "{\"\\\"/*a\":\"b\"}");
     }
 
 }
